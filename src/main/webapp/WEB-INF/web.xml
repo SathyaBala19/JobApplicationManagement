@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://jakarta.ee/xml/ns/jakartaee
+        https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+    version="5.0">
+
+    <display-name>JobApplicationManagement</display-name>
+
+    <!-- Add Application -->
+    <servlet>
+        <servlet-name>AddApplication</servlet-name>
+        <servlet-class>com.job.servlet.AddApplicationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddApplication</servlet-name>
+        <url-pattern>/AddApplicationServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- View Application -->
+    <servlet>
+        <servlet-name>ViewApplication</servlet-name>
+        <servlet-class>com.job.servlet.ViewApplicationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewApplication</servlet-name>
+        <url-pattern>/ViewApplicationServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Update Application -->
+    <servlet>
+        <servlet-name>UpdateApplication</servlet-name>
+        <servlet-class>com.job.servlet.UpdateApplicationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateApplication</servlet-name>
+        <url-pattern>/UpdateApplicationServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Delete Application -->
+    <servlet>
+        <servlet-name>DeleteApplication</servlet-name>
+        <servlet-class>com.job.servlet.DeleteApplicationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteApplication</servlet-name>
+        <url-pattern>/DeleteApplicationServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome page -->
+    <welcome-file-list>
+        <welcome-file>view/index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
